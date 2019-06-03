@@ -16,8 +16,17 @@ class NoteView extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {notes: state.notes}
+const mapStateToProps = state => {  
+  console.log('NOTE VIEW LINE 20 REDUX STATE', state)
+  // WHICHONE IS ACTIVE find
+  const activeSubject = state.subjects.find(subject => {
+    return subject.id === state.activeSubjectId
+  })
+
+  return {
+    notes: activeSubject.notes
+  }
 };
+
 
 export default connect(mapStateToProps)(NoteView);

@@ -1,5 +1,17 @@
+import {
+  ADD_NOTE,
+  CHANGE_ACTIVE_SUBJECT
+} from '../types'
+
 export const addNote = text => {
-  return {}
+  console.log(text)
+  return {
+    type: ADD_NOTE,
+    payload: {
+      text: text,
+      id: Date.now()
+    }
+  }
 };
 // NOTE: generally the id of a resource would come from our backend,
 // since we dont have that set up here, we can use a unique timestamp
@@ -11,10 +23,15 @@ export const addNote = text => {
 // }
 
 export const deleteNote = id => {
-  return {}
+  return {
+
+  }
 };
 
 
 export const changeActiveSubject = id => {
-
+  return {
+    type: CHANGE_ACTIVE_SUBJECT,
+    payload: id
+  }
 }

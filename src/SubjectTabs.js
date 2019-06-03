@@ -8,6 +8,8 @@ class SubjectTabs extends React.Component {
   };
 
   render() {
+    console.log('SUBJECT TABS ACTIONS', actions)
+    console.log('SUBJECT TABS PROPS', this.props)
     const tabs = this.props.tabs.map(tab => (
       <div
         key={tab.id}
@@ -31,4 +33,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(SubjectTabs);
+export default connect(mapStateToProps, actions)(SubjectTabs);

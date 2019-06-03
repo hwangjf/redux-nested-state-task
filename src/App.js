@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="ui centered container">
         <div className="ui segment">
-          { /* <SubjectTabs /> */ }
+          <SubjectTabs />
           <NoteView />
           <NoteInput />
         </div>
